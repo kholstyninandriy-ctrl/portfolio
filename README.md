@@ -32,3 +32,4 @@ npm run preview
 - The `Magnet`, `FadeIn`, and `AnimatedText` components in `src/components/` are custom, reusable motion primitives used throughout the page.
 - Reduced-motion preference is respected globally via a `prefers-reduced-motion` media query in `src/index.css`.
 # portfolio
+# portfolio
