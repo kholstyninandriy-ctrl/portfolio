@@ -1,0 +1,99 @@
+import FadeIn from './FadeIn';
+import AnimatedText from './AnimatedText';
+import ContactButton from './ContactButton';
+
+const ASSET_BASE =
+  'https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7';
+
+// TODO: swap in your real years of experience / niche details once confirmed
+const ABOUT_TEXT =
+  "I build websites and chatbot automation for small businesses -- hotels, beauty studios, gyms, and local service brands. My focus is simple: turn visitors into clients, cut down manual work, and make sure you never lose a lead again. Let's build something that actually grows your business!";
+
+export default function AboutSection() {
+  return (
+    <section
+      id="about"
+      className="relative min-h-screen flex flex-col items-center justify-center px-5 sm:px-8 md:px-10 py-20 overflow-hidden"
+    >
+      {/* Corner decorations */}
+      <FadeIn
+        delay={0.1}
+        x={-80}
+        y={0}
+        duration={0.9}
+        className="absolute top-[4%] left-[1%] sm:left-[2%] md:left-[4%]"
+      >
+        <img
+          src={`${ASSET_BASE}/moon_icon.11395d36.png`}
+          alt="Decorative moon"
+          className="w-[120px] sm:w-[160px] md:w-[210px]"
+        />
+      </FadeIn>
+
+      <FadeIn
+        delay={0.25}
+        x={-80}
+        y={0}
+        duration={0.9}
+        className="absolute bottom-[8%] left-[3%] sm:left-[6%] md:left-[10%]"
+      >
+        <img
+          src={`${ASSET_BASE}/p59_1.4659672e.png`}
+          alt="Decorative 3D object"
+          className="w-[100px] sm:w-[140px] md:w-[180px]"
+        />
+      </FadeIn>
+
+      <FadeIn
+        delay={0.15}
+        x={80}
+        y={0}
+        duration={0.9}
+        className="absolute top-[4%] right-[1%] sm:right-[2%] md:right-[4%]"
+      >
+        <img
+          src={`${ASSET_BASE}/lego_icon-1.703bb594.png`}
+          alt="Decorative lego block"
+          className="w-[120px] sm:w-[160px] md:w-[210px]"
+        />
+      </FadeIn>
+
+      <FadeIn
+        delay={0.3}
+        x={80}
+        y={0}
+        duration={0.9}
+        className="absolute bottom-[8%] right-[3%] sm:right-[6%] md:right-[10%]"
+      >
+        <img
+          src={`${ASSET_BASE}/Group_134-1.2e04f3ce.png`}
+          alt="Decorative 3D group"
+          className="w-[130px] sm:w-[170px] md:w-[220px]"
+        />
+      </FadeIn>
+
+      {/* Heading + text block, separated by gap-10..16 */}
+      <div className="flex flex-col items-center gap-10 sm:gap-14 md:gap-16">
+        <FadeIn delay={0} y={40}>
+          <h2
+            className="hero-heading font-black uppercase leading-none tracking-tight text-center"
+            style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
+          >
+            About me
+          </h2>
+        </FadeIn>
+
+        <AnimatedText
+          text={ABOUT_TEXT}
+          className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[560px]"
+          style={{ fontSize: 'clamp(1rem, 2vw, 1.35rem)' }}
+        />
+      </div>
+
+      {/* Gap between text block and button: gap-16..24 */}
+      <div className="mt-16 sm:mt-20 md:mt-24">
+        <ContactButton />
+      </div>
+    </section>
+  );
+}
