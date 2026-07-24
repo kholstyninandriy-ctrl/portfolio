@@ -3,39 +3,34 @@ import FadeIn from './FadeIn';
 const SERVICES = [
   {
     number: '01',
-    name: '3D Modeling',
+    name: 'Business Websites',
     description:
-      'Creation of detailed objects, characters, or environments tailored to specific client needs, ideal for games, products, and visualizations.',
+      'Lead-generation websites for hotels, beauty studios, gyms, and local service businesses -- built to sell and take bookings 24/7.',
   },
   {
     number: '02',
-    name: 'Rendering',
+    name: 'Chatbot Automation',
     description:
-      'High-quality, photorealistic renders that showcase designs with custom lighting, textures, and materials to bring concepts to life.',
+      'A chatbot that answers questions, books appointments, and follows up with clients around the clock, so you never miss a lead.',
   },
   {
     number: '03',
-    name: 'Motion Design',
+    name: 'Branding',
     description:
-      'Dynamic animations and motion graphics that add energy and storytelling to brands, products, and digital experiences.',
+      'A clear, memorable visual identity -- logo, colors, and brand system -- that helps your business stand out from competitors.',
   },
   {
     number: '04',
-    name: 'Branding',
+    name: 'Premium UX Design',
     description:
-      'Crafting cohesive visual identities -- from logos to full brand systems -- that communicate a clear and memorable presence.',
-  },
-  {
-    number: '05',
-    name: 'Web Design',
-    description:
-      'Designing clean, modern, and conversion-focused websites with attention to layout, typography, and user experience.',
+      'Scroll-stopping design and layout that keeps visitors on the page and pushes them to actually buy, not just look.',
   },
 ];
 
 export default function ServicesSection() {
   return (
     <section
+      id="services"
       className="relative rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32"
       style={{ background: '#FFFFFF' }}
     >

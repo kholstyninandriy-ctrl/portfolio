@@ -5,8 +5,9 @@ import ContactButton from './ContactButton';
 const ASSET_BASE =
   'https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7';
 
+// TODO: swap in your real years of experience / niche details once confirmed
 const ABOUT_TEXT =
-  "With more than five years of experience in design, i focus on branding, web design, and user experience, i truly enjoy working with businesses that aim to stand out and present their best image. Let's build something incredible together!";
+  "I build websites and chatbot automation for small businesses -- hotels, beauty studios, gyms, and local service brands. My focus is simple: turn visitors into clients, cut down manual work, and make sure you never lose a lead again. Let's build something that actually grows your business!";
 
 export default function AboutSection() {
   return (

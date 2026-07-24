@@ -2,10 +2,15 @@ import FadeIn from './FadeIn';
 import Magnet from './Magnet';
 import ContactButton from './ContactButton';
 
-const NAV_LINKS = ['About', 'Price', 'Projects', 'Contact'];
+const NAV_LINKS = ['About', 'Services', 'Projects', 'Contact'];
 
+// Head-only crop of the warm-toned Higgsfield avatar (approved version), so it reads
+// as a floating head that reacts to the cursor via the Magnet wrapper below,
+// same interaction pattern as the original template.
+// Full bust version, if you want it back:
+// https://d8j0ntlcm91z4.cloudfront.net/user_3GS39WHsImW1V5vojZo1mA0uRMK/hf_20260721_144407_3fb187dd-c61a-4edf-a7a7-4a6e5a134e98.png
 const PORTRAIT_URL =
-  'https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png';
+  'https://d8j0ntlcm91z4.cloudfront.net/user_3GS39WHsImW1V5vojZo1mA0uRMK/hf_20260723_181103_9a450a8c-25b6-4ddd-af8a-4d76238c2e71.jpeg';
 
 export default function HeroSection() {
   return (
@@ -29,7 +34,7 @@ export default function HeroSection() {
       <div className="overflow-hidden mt-6 sm:mt-4 md:-mt-5">
         <FadeIn delay={0.15} y={40}>
           <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[14vw] sm:text-[15vw] md:text-[16vw] lg:text-[17.5vw]">
-            Hi, i&apos;m jack
+            Hi, i&apos;m andriy
           </h1>
         </FadeIn>
       </div>
@@ -40,13 +45,14 @@ export default function HeroSection() {
         strength={3}
         activeTransition="transform 0.3s ease-out"
         inactiveTransition="transform 0.6s ease-in-out"
-        className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 z-10 w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px]"
+        className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 z-10 w-[220px] sm:w-[280px] md:w-[340px] lg:w-[400px]"
       >
         <FadeIn delay={0.6} y={30}>
           <img
             src={PORTRAIT_URL}
-            alt="Jack, 3D creator portrait"
-            className="w-full h-auto select-none pointer-events-none"
+            alt="Andriy, web design & automation specialist portrait"
+            className="w-full h-auto rounded-full select-none pointer-events-none"
+            style={{ boxShadow: '0 0 60px rgba(79, 224, 255, 0.35)' }}
             draggable={false}
           />
         </FadeIn>
@@ -59,7 +65,7 @@ export default function HeroSection() {
             className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[260px]"
             style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}
           >
-            a 3d creator driven by crafting striking and unforgettable projects
+            websites & chatbot automation that turn visitors into paying clients
           </p>
         </FadeIn>
         <FadeIn delay={0.5} y={20}>
