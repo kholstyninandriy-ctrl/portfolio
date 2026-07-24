@@ -4,13 +4,13 @@ import ContactButton from './ContactButton';
 
 const NAV_LINKS = ['About', 'Services', 'Projects', 'Contact'];
 
-// Head-only crop of the warm-toned Higgsfield avatar (approved version), so it reads
-// as a floating head that reacts to the cursor via the Magnet wrapper below,
-// same interaction pattern as the original template.
-// Full bust version, if you want it back:
-// https://d8j0ntlcm91z4.cloudfront.net/user_3GS39WHsImW1V5vojZo1mA0uRMK/hf_20260721_144407_3fb187dd-c61a-4edf-a7a7-4a6e5a134e98.png
+// Stylized non-photographic 3D-render avatar (toon-shaded, game/Pixar-style),
+// generated from Andriy's real photo -- replaces the earlier photo-realistic version.
+// Other variants to try instead:
+// https://d8j0ntlcm91z4.cloudfront.net/user_3GS39WHsImW1V5vojZo1mA0uRMK/hf_20260724_213216_3101b362-7e5d-4385-9d35-56e4ebe3be18.png
+// https://d8j0ntlcm91z4.cloudfront.net/user_3GS39WHsImW1V5vojZo1mA0uRMK/hf_20260724_213216_4b86a5fb-a4f3-4788-8cb8-a20515080540.png
 const PORTRAIT_URL =
-  'https://d8j0ntlcm91z4.cloudfront.net/user_3GS39WHsImW1V5vojZo1mA0uRMK/hf_20260723_181103_9a450a8c-25b6-4ddd-af8a-4d76238c2e71.jpeg';
+  'https://d8j0ntlcm91z4.cloudfront.net/user_3GS39WHsImW1V5vojZo1mA0uRMK/hf_20260724_213217_31c77cc7-bbe7-454e-ad4a-e5688ab8ca0d.png';
 
 export default function HeroSection() {
   return (
