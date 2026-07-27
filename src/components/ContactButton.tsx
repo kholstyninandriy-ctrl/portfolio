@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
+import { MessageCircle, Send, Instagram } from 'lucide-react';
 
-// TODO: replace with your real WhatsApp number in international format (no +, no spaces),
-// e.g. '380991234567'
-const WHATSAPP_NUMBER = 'REPLACE_WITH_YOUR_NUMBER';
+// Real WhatsApp / Telegram number
+const WHATSAPP_NUMBER = '380634906539';
 
 const CONTACT_OPTIONS = [
-  { label: 'WhatsApp', href: `https://wa.me/${WHATSAPP_NUMBER}` },
-  { label: 'Telegram', href: 'https://t.me/kholstynin' },
-  { label: 'Instagram', href: 'https://ig.me/m/visualtrap200' },
+  { label: 'WhatsApp', href: `https://wa.me/${WHATSAPP_NUMBER}`, Icon: MessageCircle },
+  { label: 'Telegram', href: 'https://t.me/kholstynin', Icon: Send },
+  { label: 'Instagram', href: 'https://ig.me/m/visualtrap200', Icon: Instagram },
 ];
 
 export default function ContactButton() {
@@ -52,16 +52,17 @@ export default function ContactButton() {
             minWidth: '190px',
           }}
         >
-          {CONTACT_OPTIONS.map((option) => (
+          {CONTACT_OPTIONS.map(({ label, href, Icon }) => (
             <a
-              key={option.label}
-              href={option.href}
+              key={label}
+              href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-center rounded-xl px-4 py-2.5 text-white text-xs sm:text-sm uppercase tracking-widest hover:opacity-80 transition-opacity"
+              className="flex items-center gap-3 rounded-xl px-4 py-2.5 text-white text-xs sm:text-sm uppercase tracking-widest hover:opacity-80 transition-opacity"
               style={{ background: 'rgba(79, 224, 255, 0.12)' }}
             >
-              {option.label}
+              <Icon size={16} strokeWidth={2} />
+              {label}
             </a>
           ))}
         </div>

@@ -28,9 +28,9 @@ export default function HeroSection() {
       </FadeIn>
 
       {/* Hero Heading */}
-      <div className="overflow-hidden mt-6 sm:mt-4 md:-mt-5">
+      <div className="overflow-hidden mt-6 sm:mt-4 md:-mt-5 px-6 md:px-10">
         <FadeIn delay={0.15} y={40}>
-          <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[14vw] sm:text-[15vw] md:text-[16vw] lg:text-[17.5vw]">
+          <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[11.5vw] sm:text-[12.5vw] md:text-[13.5vw] lg:text-[14.5vw]">
             Hi, i&apos;m andriy
           </h1>
         </FadeIn>
@@ -42,7 +42,7 @@ export default function HeroSection() {
         strength={3}
         activeTransition="transform 0.3s ease-out"
         inactiveTransition="transform 0.6s ease-in-out"
-        className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 z-10 w-[220px] sm:w-[280px] md:w-[340px] lg:w-[400px]"
+        className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 z-10 w-[300px] sm:w-[380px] md:w-[460px] lg:w-[540px]"
       >
         <FadeIn delay={0.6} y={30}>
           <img
