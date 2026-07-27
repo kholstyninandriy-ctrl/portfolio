@@ -4,13 +4,10 @@ import ContactButton from './ContactButton';
 
 const NAV_LINKS = ['About', 'Services', 'Projects', 'Contact'];
 
-// Stylized non-photographic 3D-render avatar (toon-shaded, game/Pixar-style),
-// generated from Andriy's real photo -- replaces the earlier photo-realistic version.
-// Other variants to try instead:
-// https://d8j0ntlcm91z4.cloudfront.net/user_3GS39WHsImW1V5vojZo1mA0uRMK/hf_20260724_213216_3101b362-7e5d-4385-9d35-56e4ebe3be18.png
-// https://d8j0ntlcm91z4.cloudfront.net/user_3GS39WHsImW1V5vojZo1mA0uRMK/hf_20260724_213216_4b86a5fb-a4f3-4788-8cb8-a20515080540.png
+// Stylized 3D-render head, background removed so only the head/bust floats on the
+// page (no disc/background), then reacts to the cursor via the Magnet wrapper below.
 const PORTRAIT_URL =
-  'https://d8j0ntlcm91z4.cloudfront.net/user_3GS39WHsImW1V5vojZo1mA0uRMK/hf_20260724_213217_31c77cc7-bbe7-454e-ad4a-e5688ab8ca0d.png';
+  'https://d8j0ntlcm91z4.cloudfront.net/user_3GS39WHsImW1V5vojZo1mA0uRMK/hf_20260727_153849_e687f2f5-f63a-4edb-b9db-7f04679ff595.png';
 
 export default function HeroSection() {
   return (
@@ -51,8 +48,8 @@ export default function HeroSection() {
           <img
             src={PORTRAIT_URL}
             alt="Andriy, web design & automation specialist portrait"
-            className="w-full h-auto rounded-full select-none pointer-events-none"
-            style={{ boxShadow: '0 0 60px rgba(79, 224, 255, 0.35)' }}
+            className="w-full h-auto select-none pointer-events-none"
+            style={{ filter: 'drop-shadow(0 0 40px rgba(79, 224, 255, 0.45))' }}
             draggable={false}
           />
         </FadeIn>
