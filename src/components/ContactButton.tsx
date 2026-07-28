@@ -29,7 +29,7 @@ export default function ContactButton() {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="rounded-full text-white font-medium uppercase tracking-widest px-8 py-3 sm:px-10 sm:py-3.5 md:px-12 md:py-4 text-xs sm:text-sm md:text-base"
+        className="rounded-full text-white font-medium uppercase tracking-widest px-7 py-3.5 sm:px-10 sm:py-3.5 md:px-12 md:py-4 text-sm sm:text-sm md:text-base whitespace-nowrap"
         style={{
           background:
             'linear-gradient(123deg, #001B33 7%, #0B5FA5 37%, #1C8CE0 72%, #4FE0FF 100%)',

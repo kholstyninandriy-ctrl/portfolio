@@ -28,9 +28,9 @@ export default function HeroSection() {
       </FadeIn>
 
       {/* Hero Heading */}
-      <div className="overflow-hidden mt-6 sm:mt-4 md:-mt-5 px-6 md:px-10">
+      <div className="overflow-hidden mt-8 sm:mt-4 md:-mt-5 px-5 md:px-10">
         <FadeIn delay={0.15} y={40}>
-          <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[11.5vw] sm:text-[12.5vw] md:text-[13.5vw] lg:text-[14.5vw]">
+          <h1 className="hero-heading font-black uppercase tracking-tight leading-[0.92] sm:leading-none whitespace-normal break-words sm:whitespace-nowrap w-full text-[15vw] sm:text-[12.5vw] md:text-[13.5vw] lg:text-[14.5vw]">
             Hi, i&apos;m andriy
           </h1>
         </FadeIn>
@@ -42,7 +42,7 @@ export default function HeroSection() {
         strength={3}
         activeTransition="transform 0.3s ease-out"
         inactiveTransition="transform 0.6s ease-in-out"
-        className="absolute left-1/2 -translate-x-1/2 bottom-0 z-10 w-[220px] sm:w-[300px] md:w-[380px] lg:w-[460px] xl:w-[540px]"
+        className="absolute left-1/2 -translate-x-1/2 bottom-0 z-10 w-[280px] sm:w-[320px] md:w-[400px] lg:w-[480px] xl:w-[560px]"
       >
         <FadeIn delay={0.6} y={30}>
           <img
@@ -56,11 +56,11 @@ export default function HeroSection() {
       </Magnet>
 
       {/* Bottom bar */}
-      <div className="mt-auto flex justify-between items-end pb-7 sm:pb-8 md:pb-10 px-6 md:px-10 relative z-20">
+      <div className="mt-auto flex justify-between items-end pb-6 sm:pb-8 md:pb-10 px-5 md:px-10 relative z-20 gap-3">
         <FadeIn delay={0.35} y={20}>
           <p
-            className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[260px]"
-            style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}
+            className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[150px] sm:max-w-[220px] md:max-w-[260px]"
+            style={{ fontSize: 'clamp(0.9rem, 3.2vw, 1.5rem)' }}
           >
             websites & chatbot automation that turn visitors into paying clients
           </p>
