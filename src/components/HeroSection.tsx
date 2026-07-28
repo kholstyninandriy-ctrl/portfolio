@@ -4,14 +4,21 @@ import ContactButton from './ContactButton';
 
 const NAV_LINKS = ['About', 'Services', 'Projects', 'Contact'];
 
-// Stylized 3D-render head, background removed so only the head/bust floats on the
-// page (no disc/background), then reacts to the cursor via the Magnet wrapper below.
+// Poster image shown while the 3D model loads (also used as fallback if the
+// model fails to load).
 const PORTRAIT_URL =
-  'https://d8j0ntlcm91z4.cloudfront.net/user_3GS39WHsImW1V5vojZo1mA0uRMK/hf_20260727_153849_e687f2f5-f63a-4edb-b9db-7f04679ff595.png';
+  'https://d8j0ntlcm91z4.cloudfront.net/user_3GS39WHsImW1V5vojZo1mA0uRMK/hf_20260724_213217_31c77cc7-bbe7-454e-ad4a-e5688ab8ca0d.png';
+
+// Interactive 3D avatar (GLB). Auto-rotates slowly and can be dragged
+// horizontally; vertical tilt is locked so it always reads as a natural
+// head-and-shoulders turn.
+const MODEL_URL =
+  'https://d3u0tzju9qaucj.cloudfront.net/7d051b5a-7bfe-49fe-a484-24e7b3a9458a/92cf1d83-a5d7-473c-ac8d-93f500f2f18f.glb';
 
 export default function HeroSection() {
+  const has3d = MODEL_URL.startsWith('https');
   return (
-    <section className="relative h-screen flex flex-col" style={{ overflowX: 'clip' }}>
+    <section className="relative h-screen flex flex-col" style={{ overflow: 'clip' }}>
       {/* Navbar */}
       <FadeIn delay={0} y={-20} as="nav">
         <div className="flex justify-between items-center px-6 md:px-10 pt-6 md:pt-8">
@@ -36,22 +43,55 @@ export default function HeroSection() {
         </FadeIn>
       </div>
 
-      {/* Hero Portrait */}
+      {/* Hero Portrait: interactive 3D avatar, cropped to bust height so nothing
+          below the shoulders is ever visible -- centered on mobile, off to the
+          side on larger screens. */}
       <Magnet
         padding={150}
         strength={3}
         activeTransition="transform 0.3s ease-out"
         inactiveTransition="transform 0.6s ease-in-out"
-        className="absolute left-1/2 -translate-x-1/2 bottom-0 z-10 w-[280px] sm:w-[320px] md:w-[400px] lg:w-[480px] xl:w-[560px]"
+        className="absolute left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-4 md:right-10 lg:right-16 bottom-0 z-10 w-[300px] sm:w-[300px] md:w-[360px] lg:w-[420px] xl:w-[480px]"
       >
         <FadeIn delay={0.6} y={30}>
-          <img
-            src={PORTRAIT_URL}
-            alt="Andriy, web design & automation specialist portrait"
-            className="w-full h-auto select-none pointer-events-none"
-            style={{ filter: 'drop-shadow(0 0 40px rgba(79, 224, 255, 0.45))' }}
-            draggable={false}
-          />
+          <div
+            className="relative w-full overflow-hidden"
+            style={{ height: 'clamp(260px, 42vw, 440px)' }}
+          >
+            {has3d ? (
+              <model-viewer
+                src={MODEL_URL}
+                poster={PORTRAIT_URL}
+                alt="Andriy, web design & automation specialist -- 3D avatar"
+                auto-rotate
+                auto-rotate-delay="0"
+                rotation-per-second="18deg"
+                camera-controls
+                disable-zoom
+                interaction-prompt="none"
+                shadow-intensity="0"
+                exposure="1.1"
+                min-camera-orbit="-180deg 78deg auto"
+                max-camera-orbit="180deg 92deg auto"
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '160%',
+                  filter: 'drop-shadow(0 0 40px rgba(79, 224, 255, 0.45))',
+                }}
+              />
+            ) : (
+              <img
+                src={PORTRAIT_URL}
+                alt="Andriy, web design & automation specialist portrait"
+                className="absolute top-0 left-0 w-full h-[160%] object-cover object-top select-none pointer-events-none"
+                style={{ filter: 'drop-shadow(0 0 40px rgba(79, 224, 255, 0.45))' }}
+                draggable={false}
+              />
+            )}
+          </div>
         </FadeIn>
       </Magnet>
 
