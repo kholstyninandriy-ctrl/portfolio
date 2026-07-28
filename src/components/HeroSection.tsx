@@ -51,7 +51,7 @@ export default function HeroSection() {
         strength={3}
         activeTransition="transform 0.3s ease-out"
         inactiveTransition="transform 0.6s ease-in-out"
-        className="absolute left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-4 md:right-10 lg:right-16 bottom-0 z-10 w-[300px] sm:w-[300px] md:w-[360px] lg:w-[420px] xl:w-[480px]"
+        className="absolute left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-4 md:right-10 lg:right-16 bottom-0 sm:bottom-36 md:bottom-40 lg:bottom-44 z-10 w-[300px] sm:w-[280px] md:w-[340px] lg:w-[400px] xl:w-[460px]"
       >
         <FadeIn delay={0.6} y={30}>
           <div
