@@ -10,16 +10,18 @@ interface Project {
   col1Image1: string;
   col1Image2: string;
   col2Image: string;
+  liveUrl?: string;
 }
 
-// TODO -- these three are still template placeholders. Swap name/category and
-// all three image URLs for real screenshots of your actual client work
-// (e.g. the hotel/beauty-studio/gym sites and chatbots from your Instagram).
+// TODO -- projects 02 and 03 are still template placeholders. Swap name/category and
+// image URLs for real screenshots of your actual client work
+// (e.g. the beauty-studio/gym sites and chatbots from your Instagram).
 const PROJECTS: Project[] = [
   {
     number: '01',
-    category: 'Client — ADD REAL PROJECT',
-    name: 'Business Website (placeholder)',
+    category: 'Client',
+    name: 'Solarare Hotel',
+    liveUrl: 'https://solarare.netlify.app/',
     col1Image1:
       'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png&w=1280&q=85',
     col1Image2:
@@ -97,7 +99,7 @@ function ProjectCard({ project, index, total }: { project: Project; index: numbe
                 </span>
               </div>
             </div>
-            <LiveProjectButton />
+            {project.liveUrl && <LiveProjectButton href={project.liveUrl} />}
           </div>
 
           {/* Bottom row: image grid */}
