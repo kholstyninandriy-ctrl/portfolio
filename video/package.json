@@ -1,0 +1,26 @@
+{
+  "name": "andriy-video-presentation",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Remotion video presentation for Andriy's web design & automation portfolio",
+  "scripts": {
+    "dev": "remotion studio",
+    "studio": "remotion studio",
+    "build": "remotion render Presentation out/presentation.mp4 --codec=h264 --crf=16",
+    "build:vertical": "remotion render PresentationVertical out/presentation-vertical.mp4 --codec=h264 --crf=16",
+    "still": "remotion still Presentation out/cover.png --frame=90",
+    "upgrade": "remotion upgrade",
+    "fetch:media": "node scripts/fetch-media.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.407",
+    "remotion": "4.0.407",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.3"
+  }
+}
