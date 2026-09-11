@@ -26,6 +26,17 @@ npm run build
 npm run preview
 ```
 
+## Video presentation
+
+`video/` holds a Remotion project that renders a ~43-second showreel from the
+same copy, colors and typeface as this site — in 1920x1080 and 1080x1920. The
+on-camera footage was generated on Higgsfield from a single portrait photo. See
+`video/README.md`.
+
+```bash
+cd video && npm install && npm run studio
+```
+
 ## Notes
 
 - All copy, colors, and asset URLs are as specified in the design brief.
